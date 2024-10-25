@@ -22,13 +22,5 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(moveValue * movespeed);
 
-
-        /*
-
-        float x = moveValue.x;
-        float y = moveValue.y;
-        transform.position += new Vector3(x*movespeed, y*movespeed, 0);
-        */
-        // your movement code here
     }
 }
