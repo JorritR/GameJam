@@ -8,8 +8,6 @@ public class Firefighter : MonoBehaviour
     float timer;
     bool isSpraying = true;
     float originalXScale;
-    float originalYScale;
-    float originalZScale;
 
     void Start()
     {
@@ -42,24 +40,24 @@ public class Firefighter : MonoBehaviour
         {
             while (bugSpray.transform.localScale.x > 0)
             {
-                bugSpray.transform.localScale = new Vector3(bugSpray.transform.localScale.x - 0.1f, bugSpray.transform.localScale.y, bugSpray.transform.localScale.z);
+                bugSpray.transform.localScale = new Vector3(bugSpray.transform.localScale.x - 0.1f, 2,1);
                 yield return null;
             }
             if(bugSpray.transform.localScale.x <= 0)
             {
-                bugSpray.transform.localScale = new Vector3(0, originalYScale, originalZScale);
+                bugSpray.transform.localScale = new Vector3(0, 2,1);
             }
         }
         else
         {
             while (bugSpray.transform.localScale.x < originalXScale)
             {
-                bugSpray.transform.localScale = new Vector3(bugSpray.transform.localScale.x + 0.1f, bugSpray.transform.localScale.y, bugSpray.transform.localScale.z);
+                bugSpray.transform.localScale = new Vector3(bugSpray.transform.localScale.x + 0.1f, 2,1);
                 yield return null;
             }
             if(bugSpray.transform.localScale.x > originalXScale)
             {
-                bugSpray.transform.localScale = new Vector3(originalXScale, originalYScale, originalZScale);
+                bugSpray.transform.localScale = new Vector3(originalXScale, 2,1);
             }
         }
     }
