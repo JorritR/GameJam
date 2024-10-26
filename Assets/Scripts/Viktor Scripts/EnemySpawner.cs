@@ -10,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private bool canSpawn = true;
 
+    private GameObject player;
+
     public float spawnTimeMin;
 
     public float spawnTimeMax;
@@ -17,6 +19,15 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Spawner());
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public void Update()
+    {
+        if (player == null)
+        {
+            canSpawn = false;
+        }
     }
 
     private IEnumerator Spawner()
