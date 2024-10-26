@@ -21,7 +21,11 @@ public class DogMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(targetPosition == null || targetPosition == Vector3.zero)
+        if(dog == null || npc == null)
+        {
+            return;
+        }
+        if (targetPosition == null || targetPosition == Vector3.zero)
         {
             float randomTargetX = Random.Range(npc.transform.position.x - wanderRange, npc.transform.position.x + wanderRange);
             float randomTargetY = Random.Range(npc.transform.position.y - wanderRange, npc.transform.position.y + wanderRange);
