@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float movespeed = 2.5f;
     public float maxSpeed = 5f; // Define a maximum speed
+    public Vector2 mousePosition;
+    public Vector2 aimDirection;
 
     private void Start()
     {
@@ -17,16 +19,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Read the "Move" action value
+        if(!Input.GetButton("Jump")) {
+            // Read the "Move" action value
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
 
         // Apply force to the Rigidbody2D based on input and movespeed
         rb.AddForce(moveValue * movespeed);
 
         // Limit the velocity to the maxSpeed
-        if (rb.velocity.magnitude > maxSpeed)
+        if (rb.linearVelocity.magnitude > maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
+        }
+        
+
+        
     }
 }
