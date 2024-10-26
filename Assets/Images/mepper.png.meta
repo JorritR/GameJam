@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 624d57e7cacd89343b884971e1d03b82
+guid: 1d749a73628c4c947aa8e02d5fc50774
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5419238724160274252
-    second: goofy_ahh_0
+      213: -4428404762401906457
+    second: mepper_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goofy_ahh_0
+      name: mepper_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 480
-        height: 360
+        width: 50
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4f3d9248e0053b40800000000000000
-      internalID: 5419238724160274252
+      spriteID: 7e0e26fc4552b82c0800000000000000
+      internalID: -4428404762401906457
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      goofy_ahh_0: 5419238724160274252
+      mepper_0: -4428404762401906457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
