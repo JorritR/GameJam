@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Firing : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
 
     private float shotCooldown;
 
@@ -12,9 +12,16 @@ public class Firing : MonoBehaviour
 
     public Transform firingPoint;
 
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+    }
+
     private void Start()
     {
         shotCooldown = startShotCooldown;
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void FixedUpdate()

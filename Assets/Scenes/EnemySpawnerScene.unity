@@ -258,6 +258,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &580106497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1059715944441173236, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
+  m_PrefabInstance: {fileID: 1055385124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &780644144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6214022111054267302, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
@@ -271,9 +276,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1872184266742951506, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
+      propertyPath: m_Name
+      value: PlayerModel
+      objectReference: {fileID: 0}
     - target: {fileID: 7362497642268875028, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362497642268875028, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7470693375112727016, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -375,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5713421637629040600, guid: 55f0feeedcdbf9743afc10d027f2ac43, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 580106497}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -542,6 +559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1910794523006221459, guid: 463c54d919c143247ac34cfa2f89278c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 580106497}
     - target: {fileID: 9090877685062594874, guid: 463c54d919c143247ac34cfa2f89278c, type: 3}
       propertyPath: m_Name
       value: followEnemy

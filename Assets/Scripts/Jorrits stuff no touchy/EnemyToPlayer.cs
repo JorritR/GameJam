@@ -12,13 +12,13 @@ public class EnemyToPlayer : MonoBehaviour
     private bool allergic;
     private Rigidbody2D rigidbody;
     private Vector2 TargetDirection;
-    public Transform player;
+    public GameObject player;
     
     void Awake()
     {
     
         rigidbody =  GetComponent<Rigidbody2D>();
-        player = player;
+        player = GameObject.FindGameObjectWithTag("Player");
         
     }
     void Update()
