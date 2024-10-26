@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1009596476487402870}
   - component: {fileID: 5713421637629040600}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: ShootEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0d651ad85a88c488b216389aa5f85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 7470693375112727016, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
   startShotCooldown: 1
   bulletPrefab: {fileID: 449160243464477625, guid: 4a787eca98fd4d640b26fe081a5f557d, type: 3}
   firingPoint: {fileID: 801126441794432237}
