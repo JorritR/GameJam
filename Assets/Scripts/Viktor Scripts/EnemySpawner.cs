@@ -78,7 +78,6 @@ public class EnemySpawner : MonoBehaviour
 
                     splineAnimateComponent.Container = splineToSpawnOn;
                     splineAnimateComponent.Duration = 10;
-                    splineAnimateComponent.Alignment = SplineAnimate.AlignmentMode.None;
 
                     // Ensure the SplineAnimate component is properly initialized
                     yield return null;
@@ -91,11 +90,9 @@ public class EnemySpawner : MonoBehaviour
 
                     var dogEnemyNPC = newNpc.transform.GetChild(1);
 
-                    var splineAnimateComponent = dogEnemyNPC.gameObject.AddComponent<SplineAnimate>();
+                    var splineAnimateComponent = dogEnemyNPC.gameObject.GetComponent<SplineAnimate>();
 
                     splineAnimateComponent.Container = splineToSpawnOn;
-                    splineAnimateComponent.Duration = 10;
-                    splineAnimateComponent.Alignment = SplineAnimate.AlignmentMode.None;
 
                     yield return null;
                     splineAnimateComponent.Play();
