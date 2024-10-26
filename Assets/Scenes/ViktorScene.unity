@@ -748,7 +748,7 @@ MonoBehaviour:
   speed: 3
   rotationspeed: 0
   allergic: 1
-  player: {fileID: 521899841}
+  player: {fileID: 0}
 --- !u!50 &1489459784
 Rigidbody2D:
   serializedVersion: 5
@@ -988,7 +988,7 @@ MonoBehaviour:
   speed: 3
   rotationspeed: 0
   allergic: 0
-  player: {fileID: 521899841}
+  player: {fileID: 0}
 --- !u!61 &2077041858
 BoxCollider2D:
   m_ObjectHideFlags: 0
