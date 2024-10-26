@@ -9,7 +9,7 @@ public class EnemyLogic : MonoBehaviour
     public float hp = 30;
     public float damagetaken = 30;
     private bool angel = false;
-
+    public int points;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class EnemyLogic : MonoBehaviour
         }
         if(hp <= 0 )
         {   
-
+            LevelManager.manager.IncreaseScore(points);
             Destroy(gameObject);
 ;
         } 

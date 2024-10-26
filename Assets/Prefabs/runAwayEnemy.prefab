@@ -152,6 +152,7 @@ MonoBehaviour:
   speed: 3
   rotationspeed: 0
   allergic: 1
+  player: {fileID: 0}
 --- !u!50 &238698939562456335
 Rigidbody2D:
   serializedVersion: 5
@@ -193,6 +194,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
-  startShotCooldown: 0
-  bulletPrefab: {fileID: 0}
-  firingPoint: {fileID: 0}
+  points: 10
