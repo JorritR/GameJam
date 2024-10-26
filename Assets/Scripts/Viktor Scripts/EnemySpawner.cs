@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private float spawnRate = 1f;
+    private float spawnRate = 2;
 
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [SerializeField] private bool canSpawn = true;
 
+    public float spawnTimeMin;
+
+    public float spawnTimeMax;
 
     private void Start()
     {
@@ -22,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
 
         while (canSpawn)
         {
+            spawnRate = Random.Range(spawnTimeMin, spawnTimeMax);
             yield return wait;
 
             int rand = Random.Range(0, enemyPrefabs.Length);
