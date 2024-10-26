@@ -7,6 +7,7 @@ TagManager:
   - Angel
   - EnemyBullet
   - Chunk
+  - Swatter
   layers:
   - Default
   - TransparentFX
