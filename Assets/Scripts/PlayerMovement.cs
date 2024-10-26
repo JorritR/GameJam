@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (player != null)
             {
+                LevelManager.manager.GameOver();
                 Destroy(player);  // Destroys the "Player" object only
                 playerAlive=false;
             }
