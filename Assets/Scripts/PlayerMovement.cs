@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
             }
+                //HealthBar.takeDamage(10);
         }
         }
         else{

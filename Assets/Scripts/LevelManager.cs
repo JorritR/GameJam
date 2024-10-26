@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager manager;
 
     public GameObject deathScreen;
+
+    public TextMeshProUGUI scoreText;
 
     public int score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public void GameOver()
     {
         deathScreen.SetActive(true);
+        scoreText.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
