@@ -9,18 +9,11 @@ public class EnemyLogic : MonoBehaviour
     public float hp = 30;
     public float damagetaken = 30;
     private bool angel = false;
-    private float shotCooldown;
 
-    public float startShotCooldown;
-
-    public GameObject bulletPrefab;
-
-    public Transform firingPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        shotCooldown = startShotCooldown;
 
     }
 
