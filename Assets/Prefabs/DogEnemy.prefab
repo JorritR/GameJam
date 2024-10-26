@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2534444031983067413}
   - component: {fileID: 1659993508969157882}
-  - component: {fileID: 7339451357152116920}
   - component: {fileID: 3882018918911015977}
+  - component: {fileID: 4897755630878321134}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -89,8 +89,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &7339451357152116920
-PolygonCollider2D:
+--- !u!114 &3882018918911015977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273079702404080541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312fe05e88bb74b4e8fcce30f7b0c652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 30
+  damagetaken: 30
+  points: 1
+--- !u!61 &4897755630878321134
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,7 +134,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -133,26 +148,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
---- !u!114 &3882018918911015977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273079702404080541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 312fe05e88bb74b4e8fcce30f7b0c652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 30
-  damagetaken: 30
+  m_Size: {x: 0.56, y: 1.39}
+  m_EdgeRadius: 0
 --- !u!1 &5854768915497039833
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
+  points: 1
 --- !u!114 &527453008064360256
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 49ac80d755f0848418545492a7ca9c18
+guid: 511989d8ccdcf7240a72e169ebeeb4be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7600940906136545060
-    second: wasp_main_img_0
+      213: -5789346865304215654
+    second: boom1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wasp_main_img_0
+      name: boom1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1200
-        height: 630
+        width: 82
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 427210d8b77fb7960800000000000000
-      internalID: 7600940906136545060
+      spriteID: a9f550403bb18afa0800000000000000
+      internalID: -5789346865304215654
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      goofy_ahh_0: 5419238724160274252
+      boom1_0: -5789346865304215654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
