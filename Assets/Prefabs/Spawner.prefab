@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 9090877685062594874, guid: 463c54d919c143247ac34cfa2f89278c, type: 3}
   - {fileID: 1940365097540908669, guid: b60b268579897bf41a2a597792c65d33, type: 3}
   regularNPCPrefab: {fileID: 5056251218863156904, guid: bb5d774e284b6c5479b3b4703060f552, type: 3}
+  dogNPCPrefab: {fileID: 7404318755776728771, guid: 0a65db4891c566f438e652d09c4d13c8, type: 3}
   canSpawn: 1
   spawnTimeMin: 0
   spawnTimeMax: 1

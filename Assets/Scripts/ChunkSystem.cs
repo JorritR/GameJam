@@ -20,7 +20,7 @@ public class ChunkSystem : MonoBehaviour
             return;
         }
         int randomRotation = Random.Range(0, 3);
-        Vector3 newChunkPos = new Vector3(newChunkIndex.x * 40, newChunkIndex.y * 40, 0);
+        Vector3 newChunkPos = new Vector3(newChunkIndex.x * 40, newChunkIndex.y * 40, 100);
         GameObject newChunk = Instantiate(chunkPrefab, newChunkPos, Quaternion.Euler(new Vector3(0, 0, randomRotation * 90)));
         newChunk.GetComponent<ChunkData>().chunkIndex = newChunkIndex;
         loadedChunks.Add(newChunkIndex);
