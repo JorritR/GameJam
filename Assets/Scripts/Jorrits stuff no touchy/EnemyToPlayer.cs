@@ -24,11 +24,11 @@ public class EnemyToPlayer : MonoBehaviour
     }
     void Update()
     {
-        if (Vector2.Distance(player.transform.position, transform.position) > distanceToDespawn)
-        {
-            Destroy(gameObject);
-        }
         if(player!= null){
+            if (Vector2.Distance(player.transform.position, transform.position) > distanceToDespawn)
+            {
+                Destroy(gameObject);
+            }
             TargetDirection = (player.transform.position - transform.position).normalized;
         }
         
