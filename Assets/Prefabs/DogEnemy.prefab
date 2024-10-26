@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
+  points: 1
 --- !u!1 &5854768915497039833
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
+  points: 1
 --- !u!114 &527453008064360256
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 453353133112205730}
   - component: {fileID: 6128624952326821835}
   - component: {fileID: 1009596476487402870}
+  - component: {fileID: -4403954097247301506}
   m_Layer: 0
   m_Name: RegularEnemy
   m_TagString: Untagged
@@ -134,3 +135,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4403954097247301506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056251218863156904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312fe05e88bb74b4e8fcce30f7b0c652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 30
+  damagetaken: 30
+  points: 1
