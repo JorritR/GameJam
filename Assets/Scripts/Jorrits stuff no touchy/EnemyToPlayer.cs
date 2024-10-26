@@ -32,7 +32,10 @@ public class EnemyToPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RotateTowardsTarget();
+        if(player!= null){
+            RotateTowardsTarget();
+        }
+        
         SetVelocity();
 
     }
