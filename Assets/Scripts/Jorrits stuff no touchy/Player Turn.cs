@@ -4,6 +4,10 @@ public class PlayerTurn : MonoBehaviour
 {
     public Vector2 mousePosition;
     public Vector2 aimDirection;
+        
+    private float angelCooldown;
+
+    public float angelstartCooldown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,7 +16,8 @@ public class PlayerTurn : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   if(Input.GetButton("Jump")){
+    {   if(angelCooldown <= 0 && Input.GetButton("Jump")){
+        angelCooldown = angelstartCooldown;
         //rotation
         // Get the mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -27,7 +32,7 @@ public class PlayerTurn : MonoBehaviour
         // Apply the rotation (only z-axis for 2D)
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle+90));
     }
-        if(!Input.GetButton("Jump")) {
+       else {
         //rotation
         // Get the mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -41,6 +46,17 @@ public class PlayerTurn : MonoBehaviour
 
         // Apply the rotation (only z-axis for 2D)
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle-90));
+        angelCooldown -= Time.deltaTime;
         }
+    }
+        private void FixedUpdate(){
+        if (angelCooldown <= 0 && Input.GetButton("Jump"))
+            {
+                
+            }
+            else
+            {
+                
+            }
     }
 }

@@ -12,24 +12,30 @@ public class EnemyToPlayer : MonoBehaviour
     private bool allergic;
     private Rigidbody2D rigidbody;
     private Vector2 TargetDirection;
-    private GameObject player;
+    public Transform player;
     
     void Awake()
     {
     
         rigidbody =  GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = player;
         
     }
     void Update()
     {
-        TargetDirection = (player.transform.position - transform.position).normalized;
+        if(player!= null){
+            TargetDirection = (player.transform.position - transform.position).normalized;
+        }
+        
 
     }
 
     private void FixedUpdate()
     {
-        RotateTowardsTarget();
+        if(player!= null){
+            RotateTowardsTarget();
+        }
+        
         SetVelocity();
 
     }
@@ -40,11 +46,16 @@ public class EnemyToPlayer : MonoBehaviour
     }
     private void SetVelocity()
     {
+        if (player != null){
         if(allergic){
-            rigidbody.linearVelocity = -transform.up * speed;
+                rigidbody.linearVelocity = -transform.up * speed;
+            }
+        else{
+                rigidbody.linearVelocity = transform.up * speed;
+            }
         }
         else{
-            rigidbody.linearVelocity = transform.up * speed;
+            rigidbody.linearVelocity= Vector2.zero;
         }
     }
 }
