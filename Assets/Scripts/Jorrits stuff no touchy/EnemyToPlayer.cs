@@ -13,6 +13,7 @@ public class EnemyToPlayer : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector2 TargetDirection;
     public GameObject player;
+    private int distanceToDespawn = 80;
     
     void Awake()
     {
@@ -23,6 +24,10 @@ public class EnemyToPlayer : MonoBehaviour
     }
     void Update()
     {
+        if (Vector2.Distance(player.transform.position, transform.position) > distanceToDespawn)
+        {
+            Destroy(gameObject);
+        }
         if(player!= null){
             TargetDirection = (player.transform.position - transform.position).normalized;
         }
