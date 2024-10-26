@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 524873377240893822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.76, y: 0.5185886, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -906,53 +906,53 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -0.25121915
+        z: -0.2545783
       TangentOut:
         x: 0
         y: 0
-        z: 0.2966889
+        z: 0.30079466
       Rotation:
         value:
-          x: -0.61850566
-          y: -0.34271088
-          z: 0.34271088
-          w: 0.61850566
+          x: 0.6227184
+          y: 0.33499518
+          z: -0.33499542
+          w: -0.62271833
     - Position:
-        x: -5.2048273
-        y: 13.032931
+        x: -5.2010546
+        y: 13.087724
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -0.4776167
+        z: -0.47682908
       TangentOut:
         x: 0
         y: 0
-        z: 0.88467056
+        z: 0.88226897
       Rotation:
         value:
-          x: -0.5069949
-          y: -0.49290588
-          z: 0.49290583
-          w: 0.50699484
+          x: 0.5093021
+          y: 0.49052158
+          z: -0.4905217
+          w: -0.509302
     - Position:
-        x: -8.991943
-        y: 13.009979
+        x: -8.981054
+        y: 12.947723
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -0.8329056
+        z: -0.83568054
       TangentOut:
         x: 0
         y: 0
-        z: 0.42293084
+        z: 0.42177588
       Rotation:
         value:
-          x: -0.44523746
-          y: -0.5493301
-          z: 0.5493301
-          w: 0.44523746
+          x: -0.44973084
+          y: -0.5456576
+          z: 0.54565763
+          w: 0.44973072
     - Position:
         x: -9.887079
         y: 12.619791
@@ -960,17 +960,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -0.26628008
+        z: -0.25852954
       TangentOut:
         x: 0
         y: 0
-        z: 0.24196243
+        z: 0.23649125
       Rotation:
         value:
-          x: 0.21659043
-          y: 0.67311853
-          z: -0.67311853
-          w: -0.21659045
+          x: -0.22729675
+          y: -0.6695791
+          z: 0.66957915
+          w: 0.22729662
     - Position:
         x: -9.955936
         y: 11.816463

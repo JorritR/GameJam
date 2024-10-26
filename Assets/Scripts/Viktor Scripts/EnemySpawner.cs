@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -10,6 +11,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [SerializeField] private GameObject regularNPCPrefab;
+
+    [SerializeField] private GameObject dogNPCPrefab;
 
     [SerializeField] private bool canSpawn = true;
 
@@ -63,16 +66,48 @@ public class EnemySpawner : MonoBehaviour
                     continue;
                 }
 
-                var newNpc = Instantiate(regularNPCPrefab, Vector3.zero, Quaternion.identity);
-                var splineAnimateComponent = newNpc.AddComponent<SplineAnimate>();
+                var randInt = Random.Range(0, 2);
 
-                splineAnimateComponent.Container = splineToSpawnOn;
-                splineAnimateComponent.Duration = 10;
-                splineAnimateComponent.Alignment = SplineAnimate.AlignmentMode.None;
 
-                // Ensure the SplineAnimate component is properly initialized
-                yield return null;
-                splineAnimateComponent.Play();
+                if (randInt == 0)
+                {
+                    var spawncoords = new Vector3(0, 0, 10000);
+                    var newNpc = Instantiate(regularNPCPrefab, spawncoords, Quaternion.identity);
+
+                    var splineAnimateComponent = newNpc.AddComponent<SplineAnimate>();
+
+                    splineAnimateComponent.Container = splineToSpawnOn;
+                    splineAnimateComponent.Duration = 10;
+                    splineAnimateComponent.Alignment = SplineAnimate.AlignmentMode.None;
+
+                    // Ensure the SplineAnimate component is properly initialized
+                    yield return null;
+                    splineAnimateComponent.Play();
+                } else
+                {
+                    var spawncoords = new Vector3(0, 0, 10000);
+
+                    var newNpc = Instantiate(dogNPCPrefab, spawncoords, Quaternion.identity);
+
+                    var dogEnemyNPC = newNpc.transform.GetChild(1);
+
+                    var splineAnimateComponent = dogEnemyNPC.gameObject.AddComponent<SplineAnimate>();
+
+                    splineAnimateComponent.Container = splineToSpawnOn;
+                    splineAnimateComponent.Duration = 10;
+                    splineAnimateComponent.Alignment = SplineAnimate.AlignmentMode.None;
+
+                    yield return null;
+                    splineAnimateComponent.Play();
+
+                    yield return StartCoroutine(waitsecs(1));
+
+
+                    var dog = newNpc.transform.GetChild(0);
+
+                    dog.transform.position = new Vector3(dogEnemyNPC.transform.position.x, dogEnemyNPC.transform.position.y, 0);
+                }
+
             }
             else
             {
@@ -82,5 +117,9 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
             }
         }
+    }
+    IEnumerator waitsecs(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

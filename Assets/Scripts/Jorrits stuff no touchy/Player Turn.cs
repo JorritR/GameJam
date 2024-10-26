@@ -49,14 +49,4 @@ public class PlayerTurn : MonoBehaviour
         angelCooldown -= Time.deltaTime;
         }
     }
-        private void FixedUpdate(){
-        if (angelCooldown <= 0 && Input.GetButton("Jump"))
-            {
-                
-            }
-            else
-            {
-                
-            }
-    }
 }
