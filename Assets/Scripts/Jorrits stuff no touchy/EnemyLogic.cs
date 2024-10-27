@@ -27,7 +27,6 @@ public class EnemyLogic : MonoBehaviour
     {   
 
         if(other.gameObject.tag == "Angel"&& Input.GetButton("Jump")){
-            Debug.Log("sdifsdkfjsd");
             dealDamage(damagetaken);
         }
     }

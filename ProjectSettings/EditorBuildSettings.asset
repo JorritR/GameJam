@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 16a1decef65a2374c8886388fbfec8ea
   - enabled: 1
+    path: Assets/Scenes/Demo screen.unity
+    guid: 53d85d1e5e0ae374ead0e3d280b1fcd7
+  - enabled: 1
     path: Assets/Scenes/ViktorScene.unity
     guid: 6ffd2045d88321348b673a323a60ed57
   - enabled: 0
