@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class DogMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DogMovement : MonoBehaviour
 
     private GameObject dog;
     private GameObject npc;
+    private float npcSplineSpeed;
 
     private Vector3 targetPosition;
 
@@ -16,6 +18,7 @@ public class DogMovement : MonoBehaviour
     {
         dog = transform.GetChild(0).gameObject;
         npc = transform.GetChild(1).gameObject;
+        npcSplineSpeed = npc.GetComponent<SplineAnimate>().MaxSpeed;
     }
 
     // Update is called once per frame
@@ -34,7 +37,7 @@ public class DogMovement : MonoBehaviour
 
         Vector3 currentPosition = dog.transform.position;
 
-        dog.transform.position = Vector3.MoveTowards(currentPosition, targetPosition, 0.13f);
+        dog.transform.position = Vector3.MoveTowards(currentPosition, targetPosition, 0.013f * npcSplineSpeed);
         dog.transform.rotation = Quaternion.LookRotation(Vector3.forward, targetPosition - currentPosition);
 
         if (Vector3.Distance(currentPosition, targetPosition) < 0.1f)
