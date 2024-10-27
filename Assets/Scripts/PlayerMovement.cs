@@ -72,13 +72,13 @@ public class PlayerMovement : MonoBehaviour
         if (evolutionLevel == 1)
         {
             spriteRenderer.sprite = evolution1;
-            maxSpeed = 10f;
+            maxSpeed = 7f;
 
         }
         else if (evolutionLevel == 2)
         {
             spriteRenderer.sprite = evolution2;
-            maxSpeed = 15f;
+            maxSpeed = 10f;
         }
         else
         {

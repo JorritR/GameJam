@@ -29,7 +29,13 @@ public class EnemyToPlayer : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            TargetDirection = (player.transform.position - transform.position).normalized;
+           
+            if(allergic){
+                TargetDirection = -(player.transform.position - transform.position).normalized;
+            }
+            else{
+                 TargetDirection = (player.transform.position - transform.position).normalized;
+            }
         }
         
 
@@ -52,12 +58,12 @@ public class EnemyToPlayer : MonoBehaviour
     private void SetVelocity()
     {
         if (player != null){
-        if(allergic){
-                rigidbody.linearVelocity = -transform.up * speed;
-            }
-        else{
+        // if(allergic){
+        //         rigidbody.linearVelocity = -transform.up * speed;
+        //     }
+        // else{
                 rigidbody.linearVelocity = transform.up * speed;
-            }
+         //   }
         }
         else{
             rigidbody.linearVelocity= Vector2.zero;

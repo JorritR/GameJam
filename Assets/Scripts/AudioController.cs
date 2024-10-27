@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class AudioLoopController : MonoBehaviour
+public class AudioController : MonoBehaviour
 {
-    public AudioSource introSource;  
-    public AudioSource loopSource; 
-
+    // Music
+    [SerializeField] private AudioSource introSource;
+    [SerializeField] private AudioSource loopSource; 
+    
     private AudioClip currentIntroClip;
     private AudioClip currentLoopClip;
 
@@ -13,6 +14,15 @@ public class AudioLoopController : MonoBehaviour
 
     [SerializeField] private AudioClip introClipEvo3;
     [SerializeField] private AudioClip loopClipEvo3;
+
+
+
+    // Kill sound
+    [SerializeField] private AudioSource killSoundSource;
+
+    // Death sound
+    [SerializeField] private AudioSource deathSoundSource;
+
 
     private void Start()
     {
@@ -46,5 +56,14 @@ public class AudioLoopController : MonoBehaviour
         PlayTrackSet(introClipEvo3, loopClipEvo3);
     }
 
+    public void PlayDeathSound()
+    {
+        deathSoundSource.Play();
+    }
+
+    public void PlayKillSound()
+    {
+        killSoundSource.Play();
+    }
 
 }

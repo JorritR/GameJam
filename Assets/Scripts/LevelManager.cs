@@ -9,10 +9,13 @@ public class LevelManager : MonoBehaviour
     public GameObject deathScreen;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI deathScoreText;
 
     public int score;
     private bool threshhold1 = false;
     private bool threshhold2 = false;
+
+    [SerializeField] private AudioController audioController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -27,23 +30,28 @@ public class LevelManager : MonoBehaviour
         {
             threshhold1 = true;
             PlayerMovement.instance.evolve(1);
-            EnemySpawner.Instance.evolveEnemySpawns(1);
+            EnemySpawner.instance.evolveEnemySpawns(1);
             HealthBar.instance.setTimeToDrain(0.05f);
+            audioController.PlayEvo2();
 
         }
-        if (!threshhold2 && Input.GetButton("Jump"))
+        if (!threshhold2 && score > 300)
         {
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
-            EnemySpawner.Instance.evolveEnemySpawns(2);
+            EnemySpawner.instance.evolveEnemySpawns(2);
             HealthBar.instance.setTimeToDrain(0.01f);
+            audioController.PlayEvo3();
         }
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void GameOver()
     {
+        audioController.PlayDeathSound();
         deathScreen.SetActive(true);
-        scoreText.text = "Score: " + score.ToString();
+        Destroy(scoreText);
+        deathScoreText.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
@@ -55,5 +63,6 @@ public class LevelManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
+        audioController.PlayKillSound();
     }
 }
