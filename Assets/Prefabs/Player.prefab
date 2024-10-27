@@ -564,6 +564,9 @@ MonoBehaviour:
   evolution1_animation: {fileID: 9100000, guid: 8e2a7ad26e7eb454dba0aeff71ade167, type: 2}
   evolution2_animation: {fileID: 9100000, guid: 1948596039ae8ab41af594a8396588f1, type: 2}
   animator: {fileID: 6679617117398929092}
+  deathImage: {fileID: 0}
+  evo2Image: {fileID: 21300000, guid: d2c2a9eb90db1a4429da88cf4cb4a7fa, type: 3}
+  evo3Image: {fileID: 21300000, guid: e9b6cacc1f636ec498641ae1d48fdb3e, type: 3}
 --- !u!114 &7663767147289580098
 MonoBehaviour:
   m_ObjectHideFlags: 0
