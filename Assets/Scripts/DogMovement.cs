@@ -37,7 +37,7 @@ public class DogMovement : MonoBehaviour
 
         Vector3 currentPosition = dog.transform.position;
 
-        dog.transform.position = Vector3.MoveTowards(currentPosition, targetPosition, 0.013f * npcSplineSpeed);
+        dog.transform.position = Vector3.MoveTowards(currentPosition, targetPosition, 0.011f * npcSplineSpeed);
         dog.transform.rotation = Quaternion.LookRotation(Vector3.forward, targetPosition - currentPosition);
 
         if (Vector3.Distance(currentPosition, targetPosition) < 0.1f)
