@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour
             PlayerMovement.instance.evolve(2);
             foreach (EnemySpawner spawner in enemySpawners)
             {
-                spawner.evolveEnemySpawns(1);
+                spawner.evolveEnemySpawns(2);
             }
             HealthBar.instance.setTimeToDrain(0.03f);
             audioController.PlayEvo3();
