@@ -10,6 +10,7 @@ public class EnemyLogic : MonoBehaviour
     public float damagetaken = 30;
     private bool angel = false;
     public int points;
+    public float timeRestoredWhenKilled;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class EnemyLogic : MonoBehaviour
     {   
 
         if(other.gameObject.tag == "Angel"&& Input.GetButton("Jump")){
-            Debug.Log("hqahdufjdgf");
+            Debug.Log("sdifsdkfjsd");
             dealDamage(damagetaken);
         }
     }
@@ -41,6 +42,7 @@ public class EnemyLogic : MonoBehaviour
         if(hp <= 0 )
         {   
             LevelManager.manager.IncreaseScore(points);
+            HealthBar.instance.restoreHealth(timeRestoredWhenKilled);
             Destroy(gameObject);
 ;
         } 

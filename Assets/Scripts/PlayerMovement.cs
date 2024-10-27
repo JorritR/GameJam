@@ -5,11 +5,17 @@ public class PlayerMovement : MonoBehaviour
 {
     InputAction moveAction;
     Rigidbody2D rb;
+    public static PlayerMovement instance;
     public float movespeed = 2.5f;
     public float maxSpeed = 5f; // Define a maximum speed
     public Vector2 mousePosition;
     public Vector2 aimDirection;
     public bool playerAlive = true;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
