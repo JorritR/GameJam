@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      aziatische_hoornaar_met_vleugels_0: -4028183513489810446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
