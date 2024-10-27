@@ -11,11 +11,33 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     public int score;
+    private bool threshhold1 = false;
+    private bool threshhold2 = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         manager = this;
+    }
+
+    public void Update ()
+    {
+
+        if ( !threshhold1 && score > 100)
+        {
+            threshhold1 = true;
+            PlayerMovement.instance.evolve(1);
+            EnemySpawner.Instance.evolveEnemySpawns(1);
+            HealthBar.instance.setTimeToDrain(0.05f);
+
+        }
+        if (!threshhold2 && Input.GetButton("Jump"))
+        {
+            threshhold2 = true;
+            PlayerMovement.instance.evolve(2);
+            EnemySpawner.Instance.evolveEnemySpawns(2);
+            HealthBar.instance.setTimeToDrain(0.01f);
+        }
     }
 
     public void GameOver()

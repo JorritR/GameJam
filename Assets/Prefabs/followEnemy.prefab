@@ -195,3 +195,4 @@ MonoBehaviour:
   hp: 30
   damagetaken: 30
   points: 1
+  timeRestoredWhenKilled: 1
