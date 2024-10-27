@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePosition: {x: 0, y: 0}
   aimDirection: {x: 0, y: 0}
-  angelstartCooldown: 0
+  angelstartCooldown: 0.75
 --- !u!1 &7362497642268875028
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7362497642268875028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95d383ea88a04874fa6f99a7149a2b79, type: 3}
   m_Name: 
