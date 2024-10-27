@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 mousePosition;
     public Vector2 aimDirection;
     public bool playerAlive = true;
+    public SpriteRenderer spriteRenderer;
+    public Sprite evolution1;
+    public Sprite evolution2;
 
     public void Awake()
     {
@@ -61,6 +64,23 @@ public class PlayerMovement : MonoBehaviour
                 Destroy(player);  // Destroys the "Player" object only
                 playerAlive=false;
             }
+        }
+    }
+
+    public void evolve(int evolutionLevel)
+    {
+        if (evolutionLevel == 1)
+        {
+            spriteRenderer.sprite = evolution1;
+
+        }
+        else if (evolutionLevel == 2)
+        {
+            spriteRenderer.sprite = evolution2;
+        }
+        else
+        {
+            return;
         }
     }
 }
