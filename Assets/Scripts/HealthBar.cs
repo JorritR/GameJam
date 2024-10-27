@@ -35,7 +35,7 @@ public class HealthBar : MonoBehaviour
 
         if (healthDrainTimer >= timeToDrain)
         {
-            takeDamage(25);
+            takeDamage(0.1f);
             healthDrainTimer = 0f;
         }
 

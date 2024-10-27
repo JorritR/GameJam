@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
         {
             canSpawn = false;
         }
+
     }
 
     private IEnumerator Spawner()
@@ -45,8 +46,8 @@ public class EnemySpawner : MonoBehaviour
             spawnRate = Random.Range(spawnTimeMin, spawnTimeMax);
             yield return wait;
 
-            //int randomSplineNumber = Random.Range(0, 5);
-            int randomSplineNumber = 0;
+            int randomSplineNumber = Random.Range(0, 5);
+            //int randomSplineNumber = 0;
 
             if (randomSplineNumber == 0)
             {
