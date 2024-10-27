@@ -77,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
 
                 if (randInt == 0)
                 {
-                    var spawncoords = new Vector3(0, 0, 10000);
+                    var spawncoords = new Vector3(0, 0, 250);
                     var newNpc = Instantiate(regularNPCPrefab, spawncoords, Quaternion.identity);
 
                     var splineAnimateComponent = newNpc.AddComponent<SplineAnimate>();
@@ -90,7 +90,7 @@ public class EnemySpawner : MonoBehaviour
                     splineAnimateComponent.Play();
                 } else
                 {
-                    var spawncoords = new Vector3(0, 0, 10000);
+                    var spawncoords = new Vector3(0, 0, 250);
 
                     var newNpc = Instantiate(dogNPCPrefab, spawncoords, Quaternion.identity);
 
