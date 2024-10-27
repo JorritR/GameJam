@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: cbd7d05ec75133b439ebd7c256f5bb2c
+guid: 0235899d326687b4c83b7eb66027b3c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2032510938249739402
-    second: spikybutton_0
+      213: 1832102196718566688
+    second: europese_hoornaar_animatie_0
+  - first:
+      213: 6642825482738448811
+    second: europese_hoornaar_animatie_1
+  - first:
+      213: -7209082596818424710
+    second: europese_hoornaar_animatie_2
+  - first:
+      213: -289915071903879921
+    second: europese_hoornaar_animatie_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 35
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spikybutton_0
+      name: europese_hoornaar_animatie_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 627
-        height: 149
+        width: 40
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8cb87cfdede43c10800000000000000
-      internalID: 2032510938249739402
+      spriteID: 02d7f93bd3fec6910800000000000000
+      internalID: 1832102196718566688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: europese_hoornaar_animatie_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9b983d49e003c50800000000000000
+      internalID: 6642825482738448811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: europese_hoornaar_animatie_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cef24d29134fb90800000000000000
+      internalID: -7209082596818424710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: europese_hoornaar_animatie_3
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 90
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d232437c30afbf0800000000000000
+      internalID: -289915071903879921
       vertices: []
       indices: 
       edges: []
@@ -138,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e89534a89441a3d44a08c35114ea9656
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spikybutton_0: 2032510938249739402
+      europese_hoornaar_animatie_0: 1832102196718566688
+      europese_hoornaar_animatie_1: 6642825482738448811
+      europese_hoornaar_animatie_2: -7209082596818424710
+      europese_hoornaar_animatie_3: -289915071903879921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite evolution1;
     public Sprite evolution2;
+
+    public AnimatorController evolution1_animation;
+    public AnimatorController evolution2_animation;
+
+    public Animator animator;
 
     public void Awake()
     {
@@ -73,12 +79,14 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.sprite = evolution1;
             maxSpeed = 7f;
+            animator.runtimeAnimatorController = evolution1_animation;
 
         }
         else if (evolutionLevel == 2)
         {
             spriteRenderer.sprite = evolution2;
             maxSpeed = 10f;
+            animator.runtimeAnimatorController = evolution2_animation;
         }
         else
         {
