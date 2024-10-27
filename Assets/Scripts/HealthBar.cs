@@ -23,7 +23,6 @@ public class HealthBar : MonoBehaviour
     {
         health = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player);
     }
 
     void Update()
@@ -52,7 +51,6 @@ public class HealthBar : MonoBehaviour
             PlayerMovement.instance.playerAlive = false;
         }
 
-        Debug.Log(health);
     }
 
     public void setTimeToDrain(float newTimeToDrain)
