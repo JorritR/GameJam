@@ -51,7 +51,6 @@ MonoBehaviour:
   - {fileID: 2505454664159753414, guid: 5cd0773fc92b5e942954c56ed22e17b0, type: 3}
   enemyPrefabs3:
   - {fileID: 9148120074958241903, guid: d24185a28a1a78c45ac5bd770a131722, type: 3}
-  - {fileID: 2484536366599029848, guid: ea6f02ab4ddc5024d9039909cd4a63dc, type: 3}
   regularNPCPrefab: {fileID: 5056251218863156904, guid: bb5d774e284b6c5479b3b4703060f552, type: 3}
   dogNPCPrefab: {fileID: 7404318755776728771, guid: 0a65db4891c566f438e652d09c4d13c8, type: 3}
   canSpawn: 1
