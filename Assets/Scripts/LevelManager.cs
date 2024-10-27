@@ -28,8 +28,8 @@ public class LevelManager : MonoBehaviour
         if ( !threshhold1 && score > 100)
         {
             threshhold1 = true;
-            PlayerMovement.instance.maxSpeed = 10f;
             PlayerMovement.instance.evolve(1);
+            EnemySpawner.Instance.evolveEnemySpawns(1);
             HealthBar.instance.setTimeToDrain(0.05f);
             audioController.PlayEvo2();
 
@@ -37,8 +37,8 @@ public class LevelManager : MonoBehaviour
         if (!threshhold2 && Input.GetButton("Jump"))
         {
             threshhold2 = true;
-            PlayerMovement.instance.maxSpeed = 15f;
             PlayerMovement.instance.evolve(2);
+            EnemySpawner.Instance.evolveEnemySpawns(2);
             HealthBar.instance.setTimeToDrain(0.01f);
             audioController.PlayEvo3();
         }
