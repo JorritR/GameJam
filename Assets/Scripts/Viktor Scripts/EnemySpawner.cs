@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 {
     private float spawnRate = 2;
 
-    public static EnemySpawner Instance;
+    public static EnemySpawner instance;
 
     [SerializeField] private List<GameObject> enemyPrefabs;
 
@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         StartCoroutine(Spawner());
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -132,14 +133,22 @@ public class EnemySpawner : MonoBehaviour
     {
         if (evolutionLevel == 1)
         {
-            enemyPrefabs.AddRange(enemyPrefabs2);
+            foreach (GameObject enemy in enemyPrefabs2)
+            {
+                enemyPrefabs.Add(enemy);
+                Debug.Log(enemyPrefabs);
+            }
         }
         else if (evolutionLevel == 2)
         {
-            enemyPrefabs.AddRange(enemyPrefabs3);
+            foreach (GameObject enemy in enemyPrefabs3)
+            {
+                enemyPrefabs.Add(enemy);
+            }
         }
         else
         {
+            Debug.Log(enemyPrefabs);
             return;
         }
     }

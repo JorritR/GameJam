@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3597467142727680213
 Transform:
   m_ObjectHideFlags: 0
@@ -535,6 +535,9 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   aimDirection: {x: 0, y: 0}
   playerAlive: 1
+  spriteRenderer: {fileID: 0}
+  evolution1: {fileID: 0}
+  evolution2: {fileID: 0}
 --- !u!114 &7663767147289580098
 MonoBehaviour:
   m_ObjectHideFlags: 0
