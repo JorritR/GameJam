@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6437a9be745a35b41b4072dd1888df3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreen: {fileID: 0}
+  deathScreen: {fileID: 4909687888175294292, guid: 609e43e7e402e864fab981967654b7f0, type: 3}
   scoreText: {fileID: 0}
   deathScoreText: {fileID: 0}
   score: 0

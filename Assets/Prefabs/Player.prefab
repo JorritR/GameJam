@@ -558,9 +558,12 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   aimDirection: {x: 0, y: 0}
   playerAlive: 1
-  spriteRenderer: {fileID: 0}
-  evolution1: {fileID: 0}
-  evolution2: {fileID: 0}
+  spriteRenderer: {fileID: 3183625703694778908}
+  evolution1: {fileID: 1832102196718566688, guid: 0235899d326687b4c83b7eb66027b3c2, type: 3}
+  evolution2: {fileID: 7665904229758769184, guid: f3ae78472a1c0884eb61c1f69c3e437a, type: 3}
+  evolution1_animation: {fileID: 9100000, guid: 8e2a7ad26e7eb454dba0aeff71ade167, type: 2}
+  evolution2_animation: {fileID: 9100000, guid: 1948596039ae8ab41af594a8396588f1, type: 2}
+  animator: {fileID: 6679617117398929092}
 --- !u!114 &7663767147289580098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,4 +576,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d383ea88a04874fa6f99a7149a2b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkPrefab: {fileID: 0}
+  chunkPrefab: {fileID: 524873377240893822, guid: 58b19b64b4e9ce74fb726b7c2ad30f31, type: 3}
