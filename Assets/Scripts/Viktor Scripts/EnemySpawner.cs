@@ -136,7 +136,6 @@ public class EnemySpawner : MonoBehaviour
             foreach (GameObject enemy in enemyPrefabs2)
             {
                 enemyPrefabs.Add(enemy);
-                Debug.Log(enemyPrefabs);
             }
         }
         else if (evolutionLevel == 2)
@@ -148,7 +147,6 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
-            Debug.Log(enemyPrefabs);
             return;
         }
     }
