@@ -23,6 +23,32 @@ public class ChunkSystem : MonoBehaviour
         Vector3 newChunkPos = new Vector3(newChunkIndex.x * 40, newChunkIndex.y * 40, 100);
         GameObject newChunk = Instantiate(chunkPrefab, newChunkPos, Quaternion.Euler(new Vector3(0, 0, randomRotation * 90)));
         newChunk.GetComponent<ChunkData>().chunkIndex = newChunkIndex;
+        newChunk.GetComponent<ChunkData>().rotation = randomRotation;
+
+
+        /*
+        GameObject bloemenboom = newChunk.transform.Find("Bloemboom").gameObject;
+        GameObject bloemenboomShadows = bloemenboom.transform.GetChild(0).gameObject;
+        bloemenboomShadows.transform.localRotation = Quaternion.Euler(0, 0, -randomRotation * 90);
+
+
+        
+        GameObject bomengroep = newChunk.transform.Find("Bomengroep").gameObject;
+        GameObject bomengroepShadows = bomengroep.transform.GetChild(0).gameObject;
+
+        float bomengroepShadowsInitialRotation = bomengroepShadows.transform.localEulerAngles.z;
+
+        GameObject bomengroepShadowsParent = bomengroep.transform.GetChild(0).gameObject;
+        Transform bomengroepShadowsParentTransform = bomengroepShadowsParent.transform;
+
+        foreach(Transform child in bomengroepShadowsParentTransform)
+        {
+            float bloemenboomShadowsInitialRotation = bomengroepShadowsParent.transform.localEulerAngles.z;
+
+            child.localRotation = Quaternion.Euler(0, 0, randomRotation * 90);
+        };
+        */
+        
         loadedChunks.Add(newChunkIndex);
     }
 
