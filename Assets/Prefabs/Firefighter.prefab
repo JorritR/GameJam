@@ -320,8 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 30
-  damagetaken: 30
-  points: 100
+  damagetaken: 15
+  points: 150
   timeRestoredWhenKilled: 10
 --- !u!114 &6822188288660826553
 MonoBehaviour:
