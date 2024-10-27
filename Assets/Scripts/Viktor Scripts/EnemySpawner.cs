@@ -27,10 +27,13 @@ public class EnemySpawner : MonoBehaviour
 
     public float spawnTimeMax;
 
+    public float timeToSpawn;
+    private float spawnTimer;
+
     private void Start()
     {
-        StartCoroutine(Spawner());
         player = GameObject.FindGameObjectWithTag("Player");
+        timeToSpawn = Random.Range(spawnTimeMin, spawnTimeMax);
     }
 
     public void Update()
@@ -39,40 +42,33 @@ public class EnemySpawner : MonoBehaviour
         {
             canSpawn = false;
         }
-
-    }
-
-    private IEnumerator Spawner()
-    {
-        WaitForSeconds wait = new WaitForSeconds(spawnRate);
-
-        while (canSpawn)
-        {
-            spawnRate = Random.Range(spawnTimeMin, spawnTimeMax);
-            yield return wait;
-
-            int randomSplineNumber = Random.Range(0, 5);
-            //int randomSplineNumber = 0;
-
-            if (randomSplineNumber == 0)
+        else 
+        { 
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer >= timeToSpawn) 
             {
-                var splines = GameObject.FindGameObjectsWithTag("Spline");
-                if (splines.Length == 0)
+                spawnTimer = 0;
+                timeToSpawn = Random.Range(spawnTimeMin, spawnTimeMax);
+
+                int randomSplineNumber = Random.Range(0, 3);
+
+                if (randomSplineNumber == 0)
                 {
-                    Debug.LogError("No splines found with tag 'Spline'");
-                    continue;
-                }
+                    var splines = GameObject.FindGameObjectsWithTag("Spline");
+                    if (splines.Length == 0)
+                    {
+                        Debug.LogError("No splines found with tag 'Spline'");
+                    }
 
-                var splineIndexToSpawnOn = Random.Range(0, splines.Length);
-                var splineToSpawnOn = splines[splineIndexToSpawnOn].GetComponent<SplineContainer>();
+                    var splineIndexToSpawnOn = Random.Range(0, splines.Length);
+                    var splineToSpawnOn = splines[splineIndexToSpawnOn].GetComponent<SplineContainer>();
 
-                if (splineToSpawnOn == null)
-                {
-                    Debug.LogError("SplineContainer component not found on the selected spline GameObject");
-                    continue;
-                }
+                    if (splineToSpawnOn == null)
+                    {
+                        Debug.LogError("SplineContainer component not found on the selected spline GameObject");
+                    }
 
-                var randInt = Random.Range(0, 2);
+                    var randInt = Random.Range(0, 2);
 
 
                 if (randInt == 0)
@@ -80,50 +76,47 @@ public class EnemySpawner : MonoBehaviour
                     var spawncoords = new Vector3(0, 0, 250);
                     var newNpc = Instantiate(regularNPCPrefab, spawncoords, Quaternion.identity);
 
-                    var splineAnimateComponent = newNpc.AddComponent<SplineAnimate>();
+                        var splineAnimateComponent = newNpc.AddComponent<SplineAnimate>();
 
-                    splineAnimateComponent.Container = splineToSpawnOn;
-                    splineAnimateComponent.Duration = 10;
+                        splineAnimateComponent.Container = splineToSpawnOn;
+                        splineAnimateComponent.Duration = 10;
 
                     // Ensure the SplineAnimate component is properly initialized
-                    yield return null;
                     splineAnimateComponent.Play();
                 } else
                 {
                     var spawncoords = new Vector3(0, 0, 250);
 
-                    var newNpc = Instantiate(dogNPCPrefab, spawncoords, Quaternion.identity);
+                        var newNpc = Instantiate(dogNPCPrefab, spawncoords, Quaternion.identity);
 
-                    var dogEnemyNPC = newNpc.transform.GetChild(1);
+                        var dogEnemyNPC = newNpc.transform.GetChild(1);
 
-                    var splineAnimateComponent = dogEnemyNPC.gameObject.GetComponent<SplineAnimate>();
+                        var splineAnimateComponent = dogEnemyNPC.gameObject.GetComponent<SplineAnimate>();
 
-                    splineAnimateComponent.Container = splineToSpawnOn;
+                        splineAnimateComponent.Container = splineToSpawnOn;
 
-                    yield return null;
-                    splineAnimateComponent.Play();
-
-                    yield return StartCoroutine(waitsecs(1));
+                        splineAnimateComponent.Play();
 
 
-                    var dog = newNpc.transform.GetChild(0);
 
-                    dog.transform.position = new Vector3(dogEnemyNPC.transform.position.x, dogEnemyNPC.transform.position.y, 0);
+                        var dog = newNpc.transform.GetChild(0);
+
+                        dog.transform.position = new Vector3(dogEnemyNPC.transform.position.x, dogEnemyNPC.transform.position.y, 0);
+                    }
+
                 }
+                else
+                {
+                    int rand = Random.Range(0, enemyPrefabs.Count);
+                    GameObject enemyToSpawn = enemyPrefabs[rand];
 
+                    Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+                }
             }
-            else
-            {
-                int rand = Random.Range(0, enemyPrefabs.Count);
-                GameObject enemyToSpawn = enemyPrefabs[rand];
-
-                Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
-            }
+        
         }
-    }
-    IEnumerator waitsecs(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
+
+
     }
 
     public void evolveEnemySpawns(int evolutionLevel)
