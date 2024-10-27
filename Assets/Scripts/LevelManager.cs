@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class LevelManager : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class LevelManager : MonoBehaviour
     public int score;
     private bool threshhold1 = false;
     private bool threshhold2 = false;
+
+    [SerializeField] private List<EnemySpawner> enemySpawners;
 
     [SerializeField] private AudioController audioController;
 
@@ -30,7 +34,9 @@ public class LevelManager : MonoBehaviour
         {
             threshhold1 = true;
             PlayerMovement.instance.evolve(1);
-            EnemySpawner.instance.evolveEnemySpawns(1);
+            foreach (EnemySpawner spawner in enemySpawners) {
+                spawner.evolveEnemySpawns(1);
+            }
             HealthBar.instance.setTimeToDrain(0.05f);
             audioController.PlayEvo2();
 
@@ -39,7 +45,10 @@ public class LevelManager : MonoBehaviour
         {
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
-            EnemySpawner.instance.evolveEnemySpawns(2);
+            foreach (EnemySpawner spawner in enemySpawners)
+            {
+                spawner.evolveEnemySpawns(1);
+            }
             HealthBar.instance.setTimeToDrain(0.03f);
             audioController.PlayEvo3();
         }

@@ -103,8 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
-  points: 1
-  timeRestoredWhenKilled: 0
+  points: 75
+  timeRestoredWhenKilled: 5
 --- !u!61 &4897755630878321134
 BoxCollider2D:
   m_ObjectHideFlags: 0

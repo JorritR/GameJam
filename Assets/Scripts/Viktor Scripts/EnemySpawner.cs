@@ -9,8 +9,6 @@ public class EnemySpawner : MonoBehaviour
 {
     private float spawnRate = 2;
 
-    public static EnemySpawner instance;
-
     [SerializeField] private List<GameObject> enemyPrefabs;
 
     [SerializeField] private List<GameObject> enemyPrefabs2;
@@ -31,7 +29,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        instance = this;
         StartCoroutine(Spawner());
         player = GameObject.FindGameObjectWithTag("Player");
     }

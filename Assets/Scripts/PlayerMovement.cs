@@ -81,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
     public void evolve(int evolutionLevel)
     {
         if (evolutionLevel == 1)
-        {
+        {   
+            movespeed = 2.75f;
             spriteRenderer.sprite = evolution1;
             maxSpeed = 7f;
             animator.runtimeAnimatorController = evolution1_animation;
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (evolutionLevel == 2)
         {
+            movespeed = 3f;
             spriteRenderer.sprite = evolution2;
             maxSpeed = 10f;
             animator.runtimeAnimatorController = evolution2_animation;
