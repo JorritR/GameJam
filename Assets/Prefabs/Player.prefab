@@ -367,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePosition: {x: 0, y: 0}
   aimDirection: {x: 0, y: 0}
-  angelstartCooldown: 0
+  angelstartCooldown: 0.75
 --- !u!1 &4601519603321485241
 GameObject:
   m_ObjectHideFlags: 0

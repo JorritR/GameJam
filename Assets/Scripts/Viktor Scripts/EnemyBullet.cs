@@ -25,5 +25,9 @@ public class EnemyBullet: MonoBehaviour
         { 
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Terrain")
+        {
+            Destroy(gameObject);
+        }
     }
 }
