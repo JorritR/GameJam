@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public GameObject deathScreen;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI deathScoreText;
 
     public int score;
     private bool threshhold1 = false;
@@ -34,7 +35,7 @@ public class LevelManager : MonoBehaviour
             audioController.PlayEvo2();
 
         }
-        if (!threshhold2 && score > 100)
+        if (!threshhold2 && score > 300)
         {
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
@@ -42,13 +43,15 @@ public class LevelManager : MonoBehaviour
             HealthBar.instance.setTimeToDrain(0.01f);
             audioController.PlayEvo3();
         }
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void GameOver()
     {
         audioController.PlayDeathSound();
         deathScreen.SetActive(true);
-        scoreText.text = "Score: " + score.ToString();
+        Destroy(scoreText);
+        deathScoreText.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
