@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     private bool threshhold1 = false;
     private bool threshhold2 = false;
 
+    [SerializeField] private AudioController audioController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -29,6 +31,7 @@ public class LevelManager : MonoBehaviour
             PlayerMovement.instance.maxSpeed = 10f;
             PlayerMovement.instance.evolve(1);
             HealthBar.instance.setTimeToDrain(0.05f);
+            audioController.PlayEvo2();
 
         }
         if (!threshhold2 && Input.GetButton("Jump"))
@@ -37,11 +40,13 @@ public class LevelManager : MonoBehaviour
             PlayerMovement.instance.maxSpeed = 15f;
             PlayerMovement.instance.evolve(2);
             HealthBar.instance.setTimeToDrain(0.01f);
+            audioController.PlayEvo3();
         }
     }
 
     public void GameOver()
     {
+        audioController.PlayDeathSound();
         deathScreen.SetActive(true);
         scoreText.text = "Score: " + score.ToString();
     }
@@ -55,5 +60,6 @@ public class LevelManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
+        audioController.PlayKillSound();
     }
 }
