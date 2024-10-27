@@ -44,7 +44,7 @@ public class HealthBar : MonoBehaviour
             health = 0;
         }
 
-        if (health <= 0)
+        if (player != null && health <= 0)
         {
             LevelManager.manager.GameOver();
             Destroy(player);
