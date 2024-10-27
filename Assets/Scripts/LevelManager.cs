@@ -27,15 +27,15 @@ public class LevelManager : MonoBehaviour
         {
             threshhold1 = true;
             PlayerMovement.instance.evolve(1);
-            EnemySpawner.Instance.evolveEnemySpawns(1);
+            EnemySpawner.instance.evolveEnemySpawns(1);
             HealthBar.instance.setTimeToDrain(0.05f);
 
         }
-        if (!threshhold2 && Input.GetButton("Jump"))
+        if (!threshhold2 && score > 100)
         {
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
-            EnemySpawner.Instance.evolveEnemySpawns(2);
+            EnemySpawner.instance.evolveEnemySpawns(2);
             HealthBar.instance.setTimeToDrain(0.01f);
         }
     }
