@@ -213,6 +213,7 @@ MonoBehaviour:
   scoreText: {fileID: 607443262}
   deathScoreText: {fileID: 1064332049}
   score: 0
+  enemySpawners: []
   audioController: {fileID: 1937061129569690258}
 --- !u!4 &328514695
 Transform:
