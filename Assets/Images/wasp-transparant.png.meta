@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wasp-transparant_0: 1427784157933148169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
