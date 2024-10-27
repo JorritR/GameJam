@@ -781,7 +781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You were just an innocent wasp when the human scientists kidnaped you.
+  m_text: You were just an innocent wasp when the human scientists kidnapped you.
     They experimented on you and killed off your family. Now it's your turn to make
     them pay. Sting everybody!
   m_isRightToLeft: 0
