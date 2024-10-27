@@ -321,6 +321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
+  points: 30
+  timeRestoredWhenKilled: 10
 --- !u!114 &6822188288660826553
 MonoBehaviour:
   m_ObjectHideFlags: 0
