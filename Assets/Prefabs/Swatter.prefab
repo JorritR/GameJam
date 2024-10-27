@@ -185,8 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
-  points: 1
-  timeRestoredWhenKilled: 0
+  points: 200
+  timeRestoredWhenKilled: 20
 --- !u!1 &4455849217844771469
 GameObject:
   m_ObjectHideFlags: 0

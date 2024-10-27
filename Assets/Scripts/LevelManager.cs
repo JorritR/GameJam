@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
             EnemySpawner.instance.evolveEnemySpawns(2);
-            HealthBar.instance.setTimeToDrain(0.01f);
+            HealthBar.instance.setTimeToDrain(0.03f);
             audioController.PlayEvo3();
         }
         scoreText.text = "Score: " + score.ToString();
