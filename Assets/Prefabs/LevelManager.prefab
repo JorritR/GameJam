@@ -46,4 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 0}
   scoreText: {fileID: 0}
+  deathScoreText: {fileID: 0}
   score: 0
+  audioController: {fileID: 3280710582447956215, guid: 229e494502fcd594f899306d8bea0ed9, type: 3}

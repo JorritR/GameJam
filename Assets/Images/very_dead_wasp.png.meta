@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: f118828f785138f428155ae72fc5b163
+guid: 1285609208f1f9149b2fa7f33561ae0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6296023882131512223
-    second: ragebar_0
+      213: 456405647050437739
+    second: very_dead_wasp_0
+  - first:
+      213: -7773882570805348994
+    second: very_dead_wasp_1
+  - first:
+      213: 7817412013510807432
+    second: very_dead_wasp_2
+  - first:
+      213: 4477908202781457169
+    second: very_dead_wasp_3
+  - first:
+      213: 7781608618916581132
+    second: very_dead_wasp_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ragebar_0
+      name: very_dead_wasp_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 866
-        height: 101
+        width: 59
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9b13dfec58ff5750800000000000000
-      internalID: 6296023882131512223
+      spriteID: b647ce1948a755600800000000000000
+      internalID: 456405647050437739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: very_dead_wasp_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 25
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75fb895dfe9d1490800000000000000
+      internalID: -7773882570805348994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: very_dead_wasp_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fce20dec60d7c60800000000000000
+      internalID: 7817412013510807432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: very_dead_wasp_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bb89319c9b42e30800000000000000
+      internalID: 4477908202781457169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: very_dead_wasp_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f04a76fc3ddfb60800000000000000
+      internalID: 7781608618916581132
       vertices: []
       indices: 
       edges: []
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ragebar_0: 6296023882131512223
+      very_dead_wasp_0: 456405647050437739
+      very_dead_wasp_1: -7773882570805348994
+      very_dead_wasp_2: 7817412013510807432
+      very_dead_wasp_3: 4477908202781457169
+      very_dead_wasp_4: 7781608618916581132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
