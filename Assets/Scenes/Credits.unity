@@ -769,10 +769,10 @@ RectTransform:
   - {fileID: 579219773}
   m_Father: {fileID: 1923633354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -779, y: 417}
-  m_SizeDelta: {x: 320, y: 95.999}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 185, y: -80}
+  m_SizeDelta: {x: 320, y: 95.99902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347121302
 MonoBehaviour:
@@ -1018,8 +1018,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Product Owner: Jorrit Ruelens\n\nScrum Master: Jorrit Ruelens\n\nQuality
-    Assurance: Jorrit Ruelens\n\nDevOps: Jorrit Ruelens\n\nArtwork: Marthe D'Hooghe\n\nDevelopers:
-    \nViktor Libotte, Jarne Theys, \nJorrit Ruelens"
+    Assurance: Jorrit Ruelens\n\nProduct Owner (again): Jorrit Ruelens\n\nArtwork:
+    Marthe D'Hooghe\n\nDevelopers: \nViktor Libotte, Jarne Theys, \nJorrit Ruelens"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
