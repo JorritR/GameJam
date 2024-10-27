@@ -194,5 +194,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   damagetaken: 30
-  points: 10
-  timeRestoredWhenKilled: 2
+  points: 30
+  timeRestoredWhenKilled: 4
