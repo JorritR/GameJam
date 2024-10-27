@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
             audioController.PlayEvo2();
 
         }
-        if (!threshhold2 && score > 300)
+        if (!threshhold2 && Input.GetButton("Jump"))
         {
             threshhold2 = true;
             PlayerMovement.instance.evolve(2);
