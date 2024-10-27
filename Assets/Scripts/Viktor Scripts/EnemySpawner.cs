@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -8,7 +9,13 @@ public class EnemySpawner : MonoBehaviour
 {
     private float spawnRate = 2;
 
-    [SerializeField] private GameObject[] enemyPrefabs;
+    public static EnemySpawner Instance;
+
+    [SerializeField] private List<GameObject> enemyPrefabs;
+
+    [SerializeField] private List<GameObject> enemyPrefabs2;
+
+    [SerializeField] private List<GameObject> enemyPrefabs3;
 
     [SerializeField] private GameObject regularNPCPrefab;
 
@@ -109,7 +116,7 @@ public class EnemySpawner : MonoBehaviour
             }
             else
             {
-                int rand = Random.Range(0, enemyPrefabs.Length);
+                int rand = Random.Range(0, enemyPrefabs.Count);
                 GameObject enemyToSpawn = enemyPrefabs[rand];
 
                 Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
@@ -119,5 +126,21 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator waitsecs(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+    }
+
+    public void evolveEnemySpawns(int evolutionLevel)
+    {
+        if (evolutionLevel == 1)
+        {
+            enemyPrefabs.AddRange(enemyPrefabs2);
+        }
+        else if (evolutionLevel == 2)
+        {
+            enemyPrefabs.AddRange(enemyPrefabs3);
+        }
+        else
+        {
+            return;
+        }
     }
 }
