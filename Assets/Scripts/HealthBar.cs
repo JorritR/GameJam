@@ -52,6 +52,11 @@ public class HealthBar : MonoBehaviour
         }
     }
 
+    public void setTimeToDrain(float newTimeToDrain)
+    {
+        timeToDrain = newTimeToDrain;
+    }
+
     public void restoreHealth(float restored)
     {
         health += restored;
