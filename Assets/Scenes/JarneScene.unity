@@ -127,18 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6827947380323685838, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
-      propertyPath: evo2Image
-      value: 
-      objectReference: {fileID: 21300000, guid: d2c2a9eb90db1a4429da88cf4cb4a7fa, type: 3}
-    - target: {fileID: 6827947380323685838, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
-      propertyPath: evo3Image
-      value: 
-      objectReference: {fileID: 21300000, guid: e9b6cacc1f636ec498641ae1d48fdb3e, type: 3}
-    - target: {fileID: 6827947380323685838, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
-      propertyPath: deathImage
-      value: 
-      objectReference: {fileID: 1551266565}
     - target: {fileID: 7362497642268875028, guid: 072e031bd2d30934ba36040ef050bb57, type: 3}
       propertyPath: m_Name
       value: Player
@@ -378,17 +366,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
---- !u!114 &1551266565 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4079598496113414125, guid: 1f34dfa637b774045950bca09002fe47, type: 3}
-  m_PrefabInstance: {fileID: 2099349288}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2099349288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,10 +458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4079598496113414125, guid: 1f34dfa637b774045950bca09002fe47, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1285609208f1f9149b2fa7f33561ae0e, type: 3}
     - target: {fileID: 6440549765787299689, guid: 1f34dfa637b774045950bca09002fe47, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
