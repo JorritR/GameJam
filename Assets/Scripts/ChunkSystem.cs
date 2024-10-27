@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChunkSystem : MonoBehaviour
 {
     [SerializeField]
-    private GameObject chunkPrefab;
+    private GameObject[] chunks;
     private List<Vector2Int> loadedChunks = new List<Vector2Int> { new Vector2Int(0, 0) };
 
     void Start()
@@ -21,7 +21,16 @@ public class ChunkSystem : MonoBehaviour
         }
         int randomRotation = Random.Range(0, 3);
         Vector3 newChunkPos = new Vector3(newChunkIndex.x * 40, newChunkIndex.y * 40, 100);
-        GameObject newChunk = Instantiate(chunkPrefab, newChunkPos, Quaternion.Euler(new Vector3(0, 0, randomRotation * 90)));
+
+        int randomChunkIndex = Random.Range(0, chunks.Length);
+        GameObject chunkPrefab = chunks[randomChunkIndex];
+
+        GameObject newChunk = Instantiate(chunkPrefab, newChunkPos, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        GameObject chunkNotFloor = newChunk.transform.Find("NotFloor").gameObject;
+
+        chunkNotFloor.transform.Rotate(0, 0, randomRotation * 90);
+
         newChunk.GetComponent<ChunkData>().chunkIndex = newChunkIndex;
         newChunk.GetComponent<ChunkData>().rotation = randomRotation;
 

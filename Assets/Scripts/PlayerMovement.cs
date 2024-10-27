@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -17,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite evolution1;
     public Sprite evolution2;
 
-    public AnimatorController evolution1_animation;
-    public AnimatorController evolution2_animation;
+    public RuntimeAnimatorController evolution1_animation;
+    public RuntimeAnimatorController evolution2_animation;
 
     public Animator animator;
 

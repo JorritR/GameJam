@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StoryScreen.unity
     guid: 53d85d1e5e0ae374ead0e3d280b1fcd7
+  - enabled: 1
+    path: Assets/Scenes/NewProduction.unity
+    guid: 5c61d9d00667a7b4a91daf64eff46b15
   - enabled: 0
     path: Assets/Scenes/ViktorScene.unity
     guid: 6ffd2045d88321348b673a323a60ed57
