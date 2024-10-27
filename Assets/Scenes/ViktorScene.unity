@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FollowShootEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2505454664159753414, guid: 5cd0773fc92b5e942954c56ed22e17b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7449085524929307455, guid: 5cd0773fc92b5e942954c56ed22e17b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.37
@@ -467,6 +471,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6352437404917244562, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352437404917244562, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
+      propertyPath: enemyPrefabs2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352437404917244562, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
+      propertyPath: enemyPrefabs3.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352437404917244562, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
+      propertyPath: 'enemyPrefabs2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2484536366599029848, guid: ea6f02ab4ddc5024d9039909cd4a63dc, type: 3}
+    - target: {fileID: 6352437404917244562, guid: a1f642a8780e41345bdec4fb504bd841, type: 3}
+      propertyPath: 'enemyPrefabs3.Array.data[0]'
+      value: 
+      objectReference: {fileID: 9148120074958241903, guid: d24185a28a1a78c45ac5bd770a131722, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
